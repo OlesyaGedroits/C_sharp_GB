@@ -1,2 +1,2 @@
-﻿int x = firstNumber = 5;
+﻿int x = firstNumber;
 
