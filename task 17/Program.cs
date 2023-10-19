@@ -14,7 +14,7 @@ while (count <= N)
 }
 System.Console.WriteLine();
 System.Console.WriteLine(count);
-for (int i = 1; i <= N; i++)
-{
-    System.Console.Write($"{Math.Pow(i, 2)} ");
-}
+// for (int i = 1; i <= N; i++)
+// {
+//     System.Console.Write($"{Math.Pow(i, 2)} ");
+// }
