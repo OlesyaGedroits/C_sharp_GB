@@ -18,3 +18,13 @@ System.Console.Write("Введите число: ");
 string number = Console.ReadLine();
 
 System.Console.WriteLine(quontaty(number));
+
+// if (int.TryParse(number, out int num))
+// {
+//     System.Console.WriteLine(quontaty(number));
+// }
+// else
+// {
+//     System.Console.WriteLine("Ошибка. Введите число!");
+// }
+
