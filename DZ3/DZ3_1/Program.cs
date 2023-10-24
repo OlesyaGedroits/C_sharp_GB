@@ -5,19 +5,22 @@
 // Для остальных чисел вернуть True или False.
 // 14212 -> False
 // 12821 -> True
-// 234322 -> Число не пятизначное
+// 234322 -> Число не пятизначное + False (со следующей строки)
 
 int number = 645456;
-string num = Convert.ToString(number);
 
-int IsPalindrome (string num)
+
+void IsPalindrome (int x)
 
 {
+    string num = Convert.ToString(x);
     int index = num.Length;
     if (index<5 || index>5)
     {
         System.Console.WriteLine("Число не пятизначное");
+        System.Console.WriteLine("False");
     }
 }
-IsPalindrome;
-System.Console.WriteLine(IsPalindrome);
+IsPalindrome(number);
+string a = IsPalindrome(number);
+System.Console.WriteLine(a);
