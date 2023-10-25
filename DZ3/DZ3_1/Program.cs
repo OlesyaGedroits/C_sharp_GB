@@ -8,21 +8,33 @@
 // 234322 -> Число не пятизначное + False (со следующей строки)
 
 
+
 System.Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 string num = Convert.ToString(number);
 int length = num.Length;
 
-    if (5<length || length>5)
+if (length==5)
+{
+    int i=0;
+    int i2=length-1;
+    if (num[i]==num[i2])
     {
-        System.Console.WriteLine("Число не пятизначное");
-        System.Console.WriteLine("False");
-    }
-    else if (num[0]==num[4] || num[1]==num[3])
-    {
-        System.Console.WriteLine("True");
+        while (length>1)
+        {
+            length=length-2;
+            i=i+1;
+            i2=i2-1;
+        }
+    System.Console.WriteLine("True");
     }
     else
     {
-       System.Console.WriteLine("False");
+        System.Console.WriteLine("False");
     }
+}
+else
+{
+    System.Console.WriteLine("Число не пятизначное");
+    System.Console.WriteLine("False");
+}
