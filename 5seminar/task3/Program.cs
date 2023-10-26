@@ -42,3 +42,19 @@ for (int i = 0; i < array.Length; i++)
 }
 
 System.Console.WriteLine(est);
+
+
+// bool isOk(int[] arr, int number)
+// {
+//     bool est = false;
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         if (arr[i] == number)
+//         {
+//             est = true;
+//             break;
+//         }
+//     }
+//     return est;
+// }
+// System.Console.WriteLine(isOk(array, number));
