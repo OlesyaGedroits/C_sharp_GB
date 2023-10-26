@@ -13,7 +13,7 @@ System.Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 string num = Convert.ToString(number);
 int length = num.Length;
-
+bool result = True;
 if (length==5)
 {
     int i=0;
@@ -27,14 +27,18 @@ if (length==5)
             i2=i2-1;
         }
     System.Console.WriteLine("True");
+    // result = True;
     }
     else
     {
         System.Console.WriteLine("False");
+        // result = False;
     }
 }
 else
 {
     System.Console.WriteLine("Число не пятизначное");
+    // result = False;
     System.Console.WriteLine("False");
 }
+// return result;
