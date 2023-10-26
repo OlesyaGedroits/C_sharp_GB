@@ -57,3 +57,44 @@ else
     newArr[newLength - 1] = array[newLength - 1];
     System.Console.WriteLine($"[{string.Join(", ", newArr)}]");
 }
+
+
+
+
+
+
+
+// int[] FillArray(int[] arr)
+// {
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         arr[i] = new Random().Next(1, 10);
+//     }
+
+//     return arr;
+// }
+
+// int GetNumber(string msg)
+// {
+//     System.Console.Write(msg);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
+
+// int[] array = new int[GetNumber("Введите количество элементов массива: ")];
+
+// array = FillArray(array);
+// System.Console.WriteLine($"[{string.Join(", ", array)}]");
+
+// int newLength = array.Length / 2 + array.Length % 2;
+// int[] newArr = new int[newLength];
+
+// for (int i = 0; i < array.Length / 2; i++)
+// {
+//     newArr[i] = array[i] * array[array.Length - 1 - i];
+// }
+// if (array.Length % 2 == 1)
+// {
+//     newArr[newArr.Length - 1] = array[array.Length / 2];
+// }
+
+// System.Console.WriteLine($"[{string.Join(", ", newArr)}]");
