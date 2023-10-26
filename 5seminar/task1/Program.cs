@@ -44,3 +44,44 @@ System.Console.WriteLine($"[{string.Join(", ", array)}]");
 
 SumPositiveAndNegativeNumber(array, out int sumPositive, out int sumNegative);
 System.Console.WriteLine($"Сумма положительных = {sumPositive}, сумма отрицательных = {sumNegative}");
+
+
+
+// int[] FillArray(int[] arr)
+// {
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         arr[i] = new Random().Next(-9, 10);
+//     }
+
+//     return arr;
+// }
+
+// int GetNumber(string msg)
+// {
+//     System.Console.Write(msg);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
+
+
+
+// int[] array = new int[GetNumber("Введите колическво элементов массива: ")];
+// int sumPositive = 0;
+// int sumNegative = 0;
+
+// array = FillArray(array);
+// System.Console.WriteLine($"[{string.Join(", ", array)}]");
+
+// for (int i = 0; i < array.Length; i++)
+// {
+//     if (array[i] > 0)
+//     {
+//         sumPositive += array[i];
+//     }
+//     else
+//     {
+//         sumNegative += array[i];
+//     }
+// }
+
+// System.Console.WriteLine($"Сумма положительных = {sumPositive}, сумма отрицательных = {sumNegative}");
