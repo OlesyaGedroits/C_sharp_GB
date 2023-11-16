@@ -8,17 +8,17 @@
     return Convert.ToInt32(Console.ReadLine());
  }
 
-void TochkaPeresechen (double a)
+void TochkaPeresechen ()
 {
  double k1 = VvodDannych("Введите k1: ");
  double b1 = VvodDannych("Введите b1: ");
  double k2 = VvodDannych("Введите k2: ");
  double b2 = VvodDannych("Введите b2: ");
- double x=(b2-b1)/(k2-k1);
+ double x=(b2-b1)/(k1-k2);
  double y=k1*x+b1;
  if (k1==k2) System.Console.WriteLine("Прямые не пересекаются");
- if (b1==b2) System.Console.WriteLine("Прямые лежат друг на друге");
- System.Console.WriteLine($"Точка перечечения имеет координаты ({x}; {y})");;
+ else if (k1==k2 && b1==b2) System.Console.WriteLine("Прямые лежат друг на друге");
+ else System.Console.WriteLine($"Точка пересечения имеет координаты ({x}; {y})");;
 }
 
-TochkaPeresechen(VvodDannych("Введите данные прямых:"));
+TochkaPeresechen();
