@@ -1,15 +1,15 @@
 ﻿// Задача 45: Напишите программу, которая будет создавать копию
 // заданного массива с помощью поэлементного копирования.
 
-string [] VvodMassiva (string msg)
+char [] VvodMassiva (string msg)
 {
     System.Console.WriteLine(msg);
-    string danye = Console.ReadLine();
-    
-    for (int i = 0; i < danye.Length; i++)
+    string dannye = Console.ReadLine();
+    char[] arr1 = dannye.ToCharArray();
+    char[] newArray = new char[arr1.Length];
+    for (int i = 0; i < arr1.Length; i++)
     {
-        string[] newArray = new string[danye.Length];
-        newArray[i]= danye[i];
+        newArray[i]= arr1[i];
     }
     return newArray;
 }
