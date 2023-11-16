@@ -38,6 +38,5 @@ int m = InputNumber("Введите число m: ");
 int n = InputNumber("Введите число n: ");
 
 int[,] matrix = new int[m, n];
-
 matrix = FillMatrixWhithRandom(matrix);
 PrintMatrix(matrix);
