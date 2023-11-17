@@ -29,31 +29,43 @@ void PrintArray (int [,] matrix)
 int[,] CreateIncreasingMatrix(int n, int m, int k)
     {
         int [,] matrix = new int [n, m];
-        int startNumber = new Random().Next(0,10);
+        matrix [0, 0]=1;
         for (int i = 0; i < n; i++)
         {
             for (int j = 0; j < m; j++)
-            {
-                matrix [i, j]=startNumber+k;
-                startNumber=matrix[i,j];
-            }        
+            {               
+                matrix [i, j]=matrix [0, 0]+k;
+                matrix [0,0]=matrix [i, j];         
+            }                  
         }
+        matrix [0, 0]=1;
         return matrix;
     }
   
 int[] FindNumberByPosition (int [,] matrix, int rowPosition, int columnPosition)
     {  
-      // Введите свое решение ниже
-
-
+    
+      if (rowPosition>matrix.GetLength(0) || columnPosition>matrix.GetLength(1))
+      {
+        int [] array={0};
+        return array;
+      }
+      else
+      {
+        int a= matrix[(rowPosition-1),(columnPosition-1)];
+        int[] array = {a, 0};
+        return array;              
+      }
+      
     }
 
-// void PrintCheckIfError (int[] results, int X, int Y)
-//     {
-//       // Введите свое решение ниже
-
-
-//     }
+void PrintCheckIfError (int[] results, int X, int Y)
+    {
+      int i = results[0];
+      if (i==0) System.Console.WriteLine("There is no such index");
+      else System.Console.WriteLine($"The number in [{X}, {Y}] is {i}");
+      return;
+    }
 
 int n = 3;
 int m = 4;
@@ -61,4 +73,11 @@ int k = 2;
 int x = 2;
 int y = 3;
 // int[,] matrix=CreateIncreasingMatrix(n, m, k);
-PrintArray(CreateIncreasingMatrix(n, m, k));
+// PrintArray(CreateIncreasingMatrix(n, m, k));
+// System.Console.WriteLine();
+// System.Console.WriteLine($"[{string.Join(", ", FindNumberByPosition(matrix,x,y))}]");
+// PrintCheckIfError(FindNumberByPosition(matrix,x,y),x,y);
+
+int[,] result = CreateIncreasingMatrix(n, m, k);
+PrintArray(result);
+PrintCheckIfError(FindNumberByPosition(result, x, y), x, y);
