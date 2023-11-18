@@ -29,34 +29,31 @@ void PrintArray (int [,] matrix)
 int[,] CreateIncreasingMatrix(int n, int m, int k)
     {
         int [,] matrix = new int [n, m];
-        matrix [0, 0]=1;
+        int a = 1;
         for (int i = 0; i < n; i++)
         {
             for (int j = 0; j < m; j++)
-            {               
-                matrix [i, j]=matrix [0, 0]+k;
-                matrix [0,0]=matrix [i, j];         
+            {              
+                matrix [i, j]=a;
+                a=a+k;         
             }                  
         }
-        matrix [0, 0]=1;
         return matrix;
     }
   
 int[] FindNumberByPosition (int [,] matrix, int rowPosition, int columnPosition)
     {  
-    
       if (rowPosition>matrix.GetLength(0) || columnPosition>matrix.GetLength(1))
       {
-        int [] array={0};
+        int [] array = {0};
         return array;
       }
       else
       {
-        int a= matrix[(rowPosition-1),(columnPosition-1)];
+        int a = matrix[rowPosition,columnPosition];
         int[] array = {a, 0};
         return array;              
-      }
-      
+      }      
     }
 
 void PrintCheckIfError (int[] results, int X, int Y)
@@ -67,16 +64,11 @@ void PrintCheckIfError (int[] results, int X, int Y)
       return;
     }
 
-int n = 3;
-int m = 4;
-int k = 2;
+int n = 4;
+int m = 5;
+int k = 3;
 int x = 2;
-int y = 3;
-// int[,] matrix=CreateIncreasingMatrix(n, m, k);
-// PrintArray(CreateIncreasingMatrix(n, m, k));
-// System.Console.WriteLine();
-// System.Console.WriteLine($"[{string.Join(", ", FindNumberByPosition(matrix,x,y))}]");
-// PrintCheckIfError(FindNumberByPosition(matrix,x,y),x,y);
+int y = 2;
 
 int[,] result = CreateIncreasingMatrix(n, m, k);
 PrintArray(result);
