@@ -18,7 +18,7 @@ void SeriesOfNumbers (int N)
 }
 
 int N = Messege("Введите натуральное число: ");
-if(N<1) System.Console.WriteLine("Введено не натуральное число");
+if (N < 1) System.Console.WriteLine("Введено не натуральное число");
 else
 {
 System.Console.Write("N = ");
